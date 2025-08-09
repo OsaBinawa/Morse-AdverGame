@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3512461256785175261}
   - component: {fileID: 6283933166975173383}
   - component: {fileID: -2870436467763698693}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obs2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
