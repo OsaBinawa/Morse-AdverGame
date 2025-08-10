@@ -6,13 +6,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float speed = 1;
     private Rigidbody2D rb;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         rb.linearVelocityX = -1 * speed;
@@ -23,6 +21,21 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             health -= 1;
+            
+            if (health <= 0)
+            {
+                Die();
+            }
         }
+
+        if (collision.CompareTag("Border"))
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(this.gameObject);
     }
 }
