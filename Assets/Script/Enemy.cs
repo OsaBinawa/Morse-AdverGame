@@ -3,6 +3,15 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int health = 3;
+    public int Health
+    {
+        get => health;
+        set
+        {
+            health = value;
+            if (health <= 0) Die();
+        }
+    }
     [SerializeField] private float speed = 1;
     private Rigidbody2D rb;
 
@@ -20,12 +29,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            health -= 1;
-            
-            if (health <= 0)
-            {
-                Die();
-            }
+            Health -= 1;
         }
 
         if (collision.CompareTag("Border"))
