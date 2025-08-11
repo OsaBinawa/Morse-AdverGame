@@ -615,7 +615,7 @@ Transform:
   m_GameObject: {fileID: 787889875}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.18, y: -3.06, z: 0.017395936}
+  m_LocalPosition: {x: 9.57, y: -3.06, z: 0.017395936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 950264235}
   - component: {fileID: 950264234}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Executor
   m_TagString: Border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
