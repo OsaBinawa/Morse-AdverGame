@@ -180,6 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8fb8a2e3fffc944b4b9c1874740a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  milestone: 150
+  pointsPerSecond: 30
 --- !u!1 &239910348
 GameObject:
   m_ObjectHideFlags: 0
