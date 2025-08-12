@@ -199,6 +199,7 @@ MonoBehaviour:
   prefabList:
   - {fileID: 6536623256966708772, guid: 462d7808539399a41b353d0a222a51b5, type: 3}
   - {fileID: 3181861342710251546, guid: beaa7a903c49b5a47a74a2a982746e68, type: 3}
+  - {fileID: 3181861342710251546, guid: 8d8bb2528ce845a41aaf001c924b2fc2, type: 3}
   poolSize: 10
 --- !u!4 &239910350
 Transform:
@@ -232,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48c97906a67af94da9da80fb81a2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpImpulse: 3
+  JumpImpulse: 15
   ground:
     serializedVersion: 2
     m_Bits: 64
@@ -629,7 +630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2425720811963003363, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -693,6 +694,10 @@ PrefabInstance:
     - target: {fileID: 6536623256966708772, guid: 462d7808539399a41b353d0a222a51b5, type: 3}
       propertyPath: m_Name
       value: Obs1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536623256966708772, guid: 462d7808539399a41b353d0a222a51b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

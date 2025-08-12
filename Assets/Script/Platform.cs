@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    public List<GameObject> prefabList; // all your platform prefabs
-    public int poolSize = 20;           // total pooled objects
+    public List<GameObject> prefabList;
+    public int poolSize = 20;
 
     private Queue<GameObject> poolQueue = new Queue<GameObject>();
 
@@ -12,7 +12,7 @@ public class Platform : MonoBehaviour
     {
         for (int i = 0; i < poolSize; i++)
         {
-            // Pick a random prefab to fill the pool initially
+            
             GameObject obj = Instantiate(prefabList[Random.Range(0, prefabList.Count)]);
             obj.SetActive(false);
             poolQueue.Enqueue(obj);
@@ -24,7 +24,7 @@ public class Platform : MonoBehaviour
         GameObject obj = poolQueue.Dequeue();
         obj.transform.position = position;
         obj.SetActive(true);
-        poolQueue.Enqueue(obj); // put back into rotation
+        poolQueue.Enqueue(obj); 
         return obj;
     }
 }

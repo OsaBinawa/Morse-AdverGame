@@ -6,12 +6,13 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField] private float JumpImpulse;
     [SerializeField] private LayerMask ground;
+    [SerializeField] private GameObject bulletpref;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
 
@@ -26,9 +27,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnShoop(InputAction.CallbackContext context)
+    {
+
+    }
+
     public bool Grounded()
     {
-        //Debug.DrawRay(transform.position, Vector2.down, 0.2f, Color.green);
+        
         if (Physics2D.Raycast(transform.position, Vector2.down, 1f, ground))
         {
             Debug.Log("Hit");
@@ -39,4 +45,5 @@ public class PlayerController : MonoBehaviour
             return false;
         }
     }
+
 }
