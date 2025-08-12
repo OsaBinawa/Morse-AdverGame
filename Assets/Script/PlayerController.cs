@@ -7,6 +7,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float JumpImpulse;
     [SerializeField] private LayerMask ground;
     [SerializeField] private GameObject bulletpref;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private int Magazine;
+    [SerializeField] private int HP;
+    //[SerializeField] private bool isHaveBullet;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,8 +32,40 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnShoop(InputAction.CallbackContext context)
+    public void OnShoot(InputAction.CallbackContext context)
     {
+        if (context.performed)
+        {
+            if (haveBullet())
+            {
+                GameObject bullet = Instantiate(bulletpref, firePoint.position, firePoint.rotation);
+                Magazine--;
+            }
+            else
+            {
+                Debug.Log("Melee");
+            }
+
+        }
+
+    }
+
+    public void TakeDamage()
+    {
+        HP--;
+    }
+
+    public bool isDie()
+    {
+        if (HP <= 0)
+        {
+            Debug.Log("Player Dead");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 
     }
 
@@ -38,6 +75,18 @@ public class PlayerController : MonoBehaviour
         if (Physics2D.Raycast(transform.position, Vector2.down, 1f, ground))
         {
             Debug.Log("Hit");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool haveBullet()
+    {
+        if (Magazine != 0)
+        {
             return true;
         }
         else

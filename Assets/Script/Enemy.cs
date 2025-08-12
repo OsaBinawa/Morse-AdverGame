@@ -23,6 +23,11 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            PlayerController player = FindFirstObjectByType<PlayerController>();
+            if (player != null)
+            {
+                player.TakeDamage();
+            }
             healthSystem.TakeDamage(1);
             var nyawa = healthSystem.GetHealth();
 
