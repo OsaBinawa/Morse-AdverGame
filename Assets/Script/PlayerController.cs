@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
+    public static event Action OnPlayerDied;
+
     Rigidbody2D rb;
     [SerializeField] private float JumpImpulse;
     [SerializeField] private LayerMask ground;
@@ -28,7 +31,6 @@ public class PlayerController : MonoBehaviour
         if (Grounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpImpulse);
-            //anim.SetTrigger("Jump");
         }
     }
 
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage()
     {
         HP--;
+        isDie();
     }
 
     public bool isDie()
@@ -60,6 +63,7 @@ public class PlayerController : MonoBehaviour
         if (HP <= 0)
         {
             Debug.Log("Player Dead");
+            OnPlayerDied?.Invoke();
             return true;
         }
         else
