@@ -36,14 +36,17 @@ public class Enemy : MonoBehaviour
                 Die();
             }
         }
-
+        if (collision.CompareTag("Bullet"))
+        {
+            Die();
+        }
         if (collision.CompareTag("Border"))
         {
             Die();
         }
     }
 
-    void Die()
+    public void Die()
     {
         Destroy(this.gameObject);
     }

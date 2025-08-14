@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -20,5 +21,13 @@ public class Bullet : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = transform.right * travelSpeed * Time.deltaTime;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
