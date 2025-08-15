@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2425720811963003363}
   - component: {fileID: 7349501170767099992}
   - component: {fileID: 1057413422220904294}
+  - component: {fileID: 7573565069787512474}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -81,8 +82,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.14831792, g: 0.927651, b: 0.9528302, a: 1}
+  m_Sprite: {fileID: -7232679720525634983, guid: 8652455e2ca0c934e803cf8121b6a9f1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -126,8 +127,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0.31850582, y: -0.057861436}
+  m_Size: {x: 1.341974, y: 3.1885836}
   m_Direction: 0
 --- !u!50 &2425720811963003363
 Rigidbody2D:
@@ -174,6 +175,8 @@ MonoBehaviour:
     m_Bits: 64
   bulletpref: {fileID: 2082100387698397371, guid: f70b67328cb8f9744a6c32af9af1db9f, type: 3}
   firePoint: {fileID: 6556727761483089886}
+  Magazine: 0
+  HP: 0
 --- !u!114 &1057413422220904294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,10 +222,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 6b444451-8a00-4d00-a97e-f47457f736a8
     m_ActionName: 'Player/Look[/Mouse/delta]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
-    m_ActionName: 'Player/Attack[/Mouse/leftButton,/Keyboard/enter]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
@@ -299,11 +298,37 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 145021f3-f828-49c6-b6e1-f80638d40761
+    m_ActionName: 'Player/Attack[/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!95 &7573565069787512474
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584491550661105054}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb4db6cac5ead1042bce0eb581df6cda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5392065538219881478
 GameObject:
   m_ObjectHideFlags: 0

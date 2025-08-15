@@ -937,7 +937,9 @@ PrefabInstance:
       propertyPath: Magazine
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5136085408060842833, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
+    - {fileID: 5954342298472598781, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
