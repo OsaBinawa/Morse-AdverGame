@@ -8,11 +8,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int milestone;
     [SerializeField] private float speedToAdd;
     [SerializeField] private float pointsPerSecond = 10f;
+    [SerializeField] private GameObject background;
     private float scoreTimer;
     private void Awake()
     {
         player = FindFirstObjectByType<PlayerController>();
         platformManager = FindFirstObjectByType<PlatformManager>();
+        background.SetActive(true);
     }
     private void Update()
     {
@@ -50,7 +52,7 @@ public class GameManager : MonoBehaviour
     private void OnScoreMilestone(int milestone)
     {
         Debug.Log($"Reached {milestone} points!");
-        platformManager.moveSpeed += speedToAdd;
+        platformManager.moveSpeed *= speedToAdd;
     }
 
     public void gameOver()

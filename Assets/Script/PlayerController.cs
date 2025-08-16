@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
     public bool Grounded()
     {
         
-        if (Physics2D.Raycast(transform.position, Vector2.down, 1f, ground))
+        if (Physics2D.Raycast(transform.position, Vector2.down, 2f, ground))
         {
             Debug.Log("Hit");
             return true;
