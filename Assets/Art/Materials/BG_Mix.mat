@@ -28,19 +28,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BG1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: d211adb6eff3ec341931ef34a8798d12, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BG2:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 54d0a7991b07e444dbdf8423939487d4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BG3:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: cff8c86df0cf0444aaa79756f010ad15, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BG4:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3918ab729e3ab1c4e9987061c85260b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -69,10 +69,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BG1_speed: 0
-    - _BG2_speed: 0
-    - _BG3_speed: 0
-    - _BG4_speed: 0
+    - _BG1_speed: 0.001
+    - _BG2_speed: 0.05
+    - _BG3_speed: 0.1
+    - _BG4_speed: 0.3
     - _EnableExternalAlpha: 0
     - _ZWrite: 0
     m_Colors:
