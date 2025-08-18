@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: d4ffd4cce85c2924b8e8a6d02bc6683c
+guid: 29b345af3b1b1484da72e793b378252f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7719800978292247166
-    second: platform-02_0
+      213: -5921512454844881853
+    second: Range 840_0
+  - first:
+      213: 4817711728541861984
+    second: Range 840_1
+  - first:
+      213: 2502118999681128502
+    second: Range 840_2
+  - first:
+      213: 6857872034621971707
+    second: Range 840_3
+  - first:
+      213: -6707533636063783398
+    second: Range 840_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,19 +109,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,23 +138,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: platform-02_0
+      name: Range 840_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1598
-        height: 886
+        width: 840
+        height: 840
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e7a82d7a61e322b60800000000000000
-      internalID: 7719800978292247166
+      spriteID: a1de81c7ae0ba21499ff2772da655b9b
+      internalID: -1766020384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Range 840_1
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 840
+        height: 840
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5532cb55170b704408905b8799536564
+      internalID: 779029177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Range 840_2
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 840
+        height: 840
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f51c8d640e005e47a982cbe74d113bd
+      internalID: 1891412549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Range 840_3
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 0
+        width: 840
+        height: 840
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e656d7c83571a43840d2ff7fd4996d
+      internalID: -1533656830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Range 840_4
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 0
+        width: 840
+        height: 840
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d923850865d6be2448f3a7cda1757008
+      internalID: 183651745
       vertices: []
       indices: 
       edges: []
@@ -164,7 +251,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 98a07a7cc38ef364eb8965e6571fcd66
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +261,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      platform-02_0: 7719800978292247166
+      Range 840_0: -1766020384
+      Range 840_1: 779029177
+      Range 840_2: 1891412549
+      Range 840_3: -1533656830
+      Range 840_4: 183651745
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

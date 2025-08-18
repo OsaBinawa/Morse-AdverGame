@@ -184,6 +184,7 @@ MonoBehaviour:
   milestone: 150
   speedToAdd: 10
   pointsPerSecond: 30
+  background: {fileID: 0}
 --- !u!1 &239910348
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,6 +929,10 @@ PrefabInstance:
     - target: {fileID: 1855491044931261670, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556727761483089886, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 7349501170767099992, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
       propertyPath: HP
