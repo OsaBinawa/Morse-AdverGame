@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public static event Action OnPlayerDied;
 
     Rigidbody2D rb;
+    Animator anim;
     [SerializeField] private float JumpImpulse;
     [SerializeField] private LayerMask ground;
     [SerializeField] private GameObject bulletpref;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
         if (Grounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpImpulse);
+            anim.SetTrigger("Jump");
         }
     }
 
@@ -40,11 +43,11 @@ public class PlayerController : MonoBehaviour
         {
             if (haveBullet())
             {
-                GameObject bullet = Instantiate(bulletpref, firePoint.position, firePoint.rotation);
-                Magazine--;
+                anim.SetTrigger("Range");
             }
             else
             {
+                anim.SetTrigger("Attack");
                 Debug.Log("Melee");
             }
 
@@ -85,6 +88,12 @@ public class PlayerController : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void SpawnBullet()
+    {
+        GameObject bullet = Instantiate(bulletpref, firePoint.position, firePoint.rotation);
+        Magazine--;
     }
 
     public bool haveBullet()

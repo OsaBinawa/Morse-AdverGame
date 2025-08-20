@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: d4ffd4cce85c2924b8e8a6d02bc6683c
+guid: 067640003c446a7479035d092fedcf51
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7719800978292247166
-    second: platform-02_0
+      213: 8267465161590960020
+    second: Jump 840_0
+  - first:
+      213: 4782363243527430781
+    second: Jump 840_1
+  - first:
+      213: -49696453569019930
+    second: Jump 840_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,19 +103,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: platform-02_0
+      name: Jump 840_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1598
-        height: 886
+        width: 840
+        height: 840
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7a82d7a61e322b60800000000000000
-      internalID: 7719800978292247166
+      spriteID: 49feb85f2cfebb270800000000000000
+      internalID: 8267465161590960020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump 840_1
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 840
+        height: 840
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72665d280e5e5240800000000000000
+      internalID: 4782363243527430781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump 840_2
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 840
+        height: 840
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6effb6ab6517f4ff0800000000000000
+      internalID: -49696453569019930
       vertices: []
       indices: 
       edges: []
@@ -164,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e703a4a22f9567a4ebeb07c749fd9685
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      platform-02_0: 7719800978292247166
+      Jump 840_0: 8267465161590960020
+      Jump 840_1: 4782363243527430781
+      Jump 840_2: -49696453569019930
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
