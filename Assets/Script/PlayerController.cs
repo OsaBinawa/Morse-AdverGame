@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         if (Grounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpImpulse);
+            anim.SetTrigger("Jump");
         }
     }
 

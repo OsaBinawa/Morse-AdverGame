@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   milestone: 150
-  speedToAdd: 10
+  speedToAdd: 3
   pointsPerSecond: 30
   background: {fileID: 810712114}
 --- !u!1001 &112177907
