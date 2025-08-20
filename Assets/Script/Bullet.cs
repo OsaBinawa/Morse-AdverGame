@@ -16,7 +16,6 @@ public class Bullet : MonoBehaviour
     {
         
     }
-
     
     void FixedUpdate()
     {
