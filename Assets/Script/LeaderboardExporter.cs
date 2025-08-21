@@ -7,14 +7,17 @@ using UnityEngine;
 public class LeaderboardEntry
 {
     public string playerName;
+    public string dropdownChoice;
     public int score;
 
-    public LeaderboardEntry(string name, int score)
+    public LeaderboardEntry(string name, string dropdownChoice, int score)
     {
         this.playerName = name;
+        this.dropdownChoice = dropdownChoice;
         this.score = score;
     }
 }
+
 public class LeaderboardExporter : MonoBehaviour
 {
     public static LeaderboardExporter Instance { get; private set; }
@@ -55,14 +58,15 @@ public class LeaderboardExporter : MonoBehaviour
     public void Export(List<LeaderboardEntry> leaderboard)
     {
         StringBuilder csv = new StringBuilder();
-        csv.AppendLine("Rank,Name,Score");
+        csv.AppendLine("Rank,Name,Social,Score");
 
         for (int i = 0; i < leaderboard.Count; i++)
         {
-            csv.AppendLine($"{i + 1},{leaderboard[i].playerName},{leaderboard[i].score}");
+            csv.AppendLine($"{i + 1},{leaderboard[i].playerName},{leaderboard[i].dropdownChoice},{leaderboard[i].score}");
         }
 
         File.WriteAllText(filePath, csv.ToString());
-        Debug.Log("Leaderboard exported to: " + filePath);
+        Debug.Log("✅ Leaderboard exported to: " + filePath);
     }
+
 }

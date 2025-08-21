@@ -4,6 +4,7 @@ public class PlayerProfile : MonoBehaviour
 {
     public static PlayerProfile Instance { get; private set; }
     public string PlayerName { get; private set; } = "Player";
+    public string DropdownChoice { get; private set; } = "None";
 
     private void Awake()
     {
@@ -16,13 +17,10 @@ public class PlayerProfile : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void SetPlayerName(string name)
+    public void SetPlayerName(string name, string dropdown = "None")
     {
-        if (!string.IsNullOrEmpty(name))
-            PlayerName = name;
-        else
-            PlayerName = "Player";
-
-        Debug.Log("👤 Player name set to: " + PlayerName);
+        PlayerName = !string.IsNullOrEmpty(name) ? name : "Player";
+        DropdownChoice = dropdown;
+        Debug.Log($"👤 Player set: {PlayerName}, Dropdown: {DropdownChoice}");
     }
 }
