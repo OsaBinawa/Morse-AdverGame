@@ -222,6 +222,9 @@ MonoBehaviour:
   speedToAdd: 1
   pointsPerSecond: 30
   background: {fileID: 810712114}
+  lerpSpeed: 2
+  currentMultiplier: 1
+  targetMultiplier: 1.2
 --- !u!1 &82470358
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,8 +615,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabList:
   - {fileID: 6536623256966708772, guid: 462d7808539399a41b353d0a222a51b5, type: 3}
-  - {fileID: 3181861342710251546, guid: beaa7a903c49b5a47a74a2a982746e68, type: 3}
-  - {fileID: 3181861342710251546, guid: 8d8bb2528ce845a41aaf001c924b2fc2, type: 3}
+  - {fileID: 6536623256966708772, guid: e486a4d5ebf4b0d44a6205b21a25ddef, type: 3}
+  - {fileID: 6536623256966708772, guid: 59871ef52a0a2cb439ce3b86cf496077, type: 3}
   poolSize: 10
 --- !u!4 &239910350
 Transform:
@@ -1249,6 +1252,7 @@ GameObject:
   - component: {fileID: 620463638}
   - component: {fileID: 620463637}
   - component: {fileID: 620463636}
+  - component: {fileID: 620463640}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -1341,6 +1345,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &620463640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620463635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48879a0973ad81f4d9c2480aa471d95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistanceText: {fileID: 839433757}
 --- !u!1 &810712114
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,6 @@ public class UIManager : MonoBehaviour
     }
     void Update()
     {
-        //DistanceText.text = gameManager.score
+        DistanceText.text = $"{gameManager.score} M";
     }
 }
