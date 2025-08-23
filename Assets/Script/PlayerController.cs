@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using System;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,14 +16,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private int Magazine;
     [SerializeField] private int HP;
+    [SerializeField] private int curHP;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip melee, ranged, jump;
+    [SerializeField] private Image[] hearts;
+    [SerializeField] private TMP_Text MagazineUI;
     //[SerializeField] private bool isHaveBullet;
 
     void Start()
     {
+        curHP = HP;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        UpdateHearts();
+        UpdateUIBullet();
     }
 
     
@@ -64,13 +72,14 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage()
     {
-        HP--;
+        curHP--;
         isDie();
+        UpdateHearts();
     }
 
     public bool isDie()
     {
-        if (HP <= 0)
+        if (curHP <= 0)
         {
             Debug.Log("Player Dead");
             OnPlayerDied?.Invoke();
@@ -101,6 +110,20 @@ public class PlayerController : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletpref, firePoint.position, firePoint.rotation);
         Magazine--;
+        UpdateUIBullet();
+    }
+
+    void UpdateHearts()
+    {
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            hearts[i].gameObject.SetActive(i < curHP);
+        }
+    }
+
+    void UpdateUIBullet()
+    {
+        MagazineUI.text = Magazine.ToString();
     }
 
     public bool haveBullet()
