@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BG_Mix
+  m_Name: BG_Mix_v1
   m_Shader: {fileID: -6465566751694194690, guid: 84a3368c6a78a434396eecf3ab61bf8f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
