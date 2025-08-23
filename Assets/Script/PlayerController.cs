@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private int Magazine;
     [SerializeField] private int HP;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip melee, ranged, jump;
     //[SerializeField] private bool isHaveBullet;
 
     void Start()
@@ -34,6 +36,8 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpImpulse);
             anim.SetTrigger("Jump");
+            audioSource.clip = jump;
+            audioSource.Play();
         }
     }
 
@@ -44,13 +48,16 @@ public class PlayerController : MonoBehaviour
             if (haveBullet())
             {
                 anim.SetTrigger("Range");
+                audioSource.clip = ranged;
+                audioSource.Play();
             }
             else
             {
                 anim.SetTrigger("Attack");
                 Debug.Log("Melee");
+                audioSource.clip = melee;
+                audioSource.Play();
             }
-
         }
 
     }
@@ -98,7 +105,7 @@ public class PlayerController : MonoBehaviour
 
     public bool haveBullet()
     {
-        if (Magazine != 0)
+        if (Magazine > 0)
         {
             return true;
         }
