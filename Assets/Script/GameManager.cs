@@ -1,27 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
     PlayerController player;
     PlatformManager platformManager;
-
+    public static event Action OnMilestone;
     public int score;
     [SerializeField] private int milestone;
     [SerializeField] private float speedToAdd = 1.05f;
     [SerializeField] private float pointsPerSecond = 10f;
     private float scoreTimer;
-
-    [Header("BG Settings")]
-    [SerializeField] private GameObject background;
-    [SerializeField] private float lerpSpeed = 2f;
-    [SerializeField] private float currentMultiplier = 1f;
-    [SerializeField] private float targetMultiplier = 1.2f;
-    private float[] baseSpeeds = { 0.05f, 0.1f, 0.3f };
-    private Renderer bgRenderer;
-    private Material bgMaterial;
 
     // Leaderboard
     private const int MaxLeaderboardEntries = 5;
@@ -31,10 +23,6 @@ public class GameManager : MonoBehaviour
     {
         player = FindFirstObjectByType<PlayerController>();
         platformManager = FindFirstObjectByType<PlatformManager>();
-        background.SetActive(true);
-        bgRenderer = background.GetComponent<Renderer>();
-        bgMaterial = bgRenderer.material;   
-
         LoadLeaderboard();
     }
 
@@ -70,6 +58,7 @@ public class GameManager : MonoBehaviour
         {
             milestone = score;
             OnScoreMilestone(score);
+            OnMilestone?.Invoke();
         }
     }
 
@@ -77,12 +66,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log($"Reached {milestone} points!");
         platformManager.moveSpeed *= speedToAdd;
-
-        Mathf.Lerp(currentMultiplier, targetMultiplier, Time.deltaTime * lerpSpeed);
-
-        bgMaterial.SetFloat("_BG2_speed", baseSpeeds[0] * currentMultiplier);
-        bgMaterial.SetFloat("_BG3_speed", baseSpeeds[1] * currentMultiplier);
-        bgMaterial.SetFloat("_BG4_speed", baseSpeeds[2] * currentMultiplier);
     }
 
     public void GameOver()
