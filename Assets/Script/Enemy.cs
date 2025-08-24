@@ -1,10 +1,12 @@
 using UnityEngine;
+using System;
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int health = 3;
     [SerializeField] private float speed = 1;
     [SerializeField] private ParticleSystem dieEffect;
+    public static event Action OnEnemyDied;
     HealthSystem healthSystem;
     private Rigidbody2D rb;
 
@@ -14,7 +16,7 @@ public class Enemy : MonoBehaviour
         healthSystem = new HealthSystem(health);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         rb.linearVelocityX = -1 * speed;
         
@@ -52,6 +54,8 @@ public class Enemy : MonoBehaviour
         dieEffect.transform.parent = null;
         dieEffect.Play();
 
+        OnEnemyDied?.Invoke();
+        
         Destroy(dieEffect.gameObject, dieEffect.main.duration + dieEffect.main.startLifetime.constantMax);
         Destroy(this.gameObject); 
     }
