@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
     
     void FixedUpdate()
     {
-        rb.linearVelocity = transform.right * travelSpeed * Time.deltaTime;
+        rb.linearVelocity = transform.right * travelSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

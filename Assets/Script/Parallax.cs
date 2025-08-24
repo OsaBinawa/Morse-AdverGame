@@ -10,6 +10,7 @@ public class Parallax : MonoBehaviour
     {
         mat = GetComponent<Renderer>().material;
     }
+
     private void OnEnable()
     {
         GameManager.OnMilestone += AddSpeed;

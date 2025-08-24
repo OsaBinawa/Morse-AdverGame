@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         UpdateUIBullet();
     }
 
-    
+
     void Update()
     {
 
@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
     public bool Grounded()
     {
-        
+
         if (Physics2D.Raycast(transform.position, Vector2.down, 2f, ground))
         {
             Debug.Log("Hit");
@@ -135,6 +135,19 @@ public class PlayerController : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Obstacle"))
+        {
+            //Isi Sendiri
+        }
+
+        if (collision.CompareTag("Border"))
+        {
+            //Isi Sendiri
         }
     }
 
