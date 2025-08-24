@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private int health = 3;
     [SerializeField] private float speed = 1;
+    [SerializeField] private ParticleSystem dieEffect;
     HealthSystem healthSystem;
     private Rigidbody2D rb;
 
@@ -42,12 +43,16 @@ public class Enemy : MonoBehaviour
         }
         if (collision.CompareTag("Border"))
         {
-            Die();
+            Destroy(this.gameObject); 
         }
     }
 
     public void Die()
     {
-        Destroy(this.gameObject);
+        dieEffect.transform.parent = null;
+        dieEffect.Play();
+
+        Destroy(dieEffect.gameObject, dieEffect.main.duration + dieEffect.main.startLifetime.constantMax);
+        Destroy(this.gameObject); 
     }
 }
