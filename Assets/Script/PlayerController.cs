@@ -142,12 +142,13 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("Obstacle"))
         {
-            //Isi Sendiri
+            TakeDamage();
         }
 
         if (collision.CompareTag("Border"))
         {
-            //Isi Sendiri
+            curHP -= HP;
+            isDie();
         }
     }
 
