@@ -171,8 +171,6 @@ MonoBehaviour:
   health: 1
   speed: 10
   dieEffect: {fileID: 2029878288237150427}
-  audioSource: {fileID: 1692619220367856783}
-  die: {fileID: 8300000, guid: 5fac3e3f1ff430d4c85ba5971e87a28c, type: 3}
 --- !u!82 &1692619220367856783
 AudioSource:
   m_ObjectHideFlags: 0

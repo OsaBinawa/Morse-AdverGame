@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip melee, ranged, jump;
     [SerializeField] private Image[] hearts;
     [SerializeField] private TMP_Text MagazineUI;
+    [SerializeField] private BoxCollider2D meeleRange;
     public Sprite fullHeart; 
     public Sprite emptyHeart;
     //[SerializeField] private bool isHaveBullet;
@@ -126,6 +127,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnMeeleDamage()
+    {
+
+    }
     void UpdateUIBullet()
     {
         MagazineUI.text = Magazine.ToString();
