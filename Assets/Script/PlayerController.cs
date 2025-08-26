@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip melee, ranged, jump;
     [SerializeField] private Image[] hearts;
     [SerializeField] private TMP_Text MagazineUI;
+    public Sprite fullHeart; 
+    public Sprite emptyHeart;
     //[SerializeField] private bool isHaveBullet;
 
     void Start()
@@ -117,7 +119,10 @@ public class PlayerController : MonoBehaviour
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            hearts[i].gameObject.SetActive(i < curHP);
+            if (i < curHP)
+                hearts[i].sprite = fullHeart;
+            else
+                hearts[i].sprite = emptyHeart;
         }
     }
 

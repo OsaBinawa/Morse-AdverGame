@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text DistanceText;
+    [SerializeField] private TMP_Text ResDistanceText;
     GameManager gameManager;
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         DistanceText.text = $"{gameManager.score} M";
+        ResDistanceText.text = $"{gameManager.score} M";
     }
     public void GoToMainMenu(string scene)
     {
