@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int milestone;
     [SerializeField] private float speedToAdd = 1.05f;
     [SerializeField] private float pointsPerSecond = 10f;
+    [SerializeField] private GameObject GameOverPanel;  
     private float scoreTimer;
 
     // Leaderboard
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
     {
         player = FindFirstObjectByType<PlayerController>();
         platformManager = FindFirstObjectByType<PlatformManager>();
+        Time.timeScale = 1f;
         LoadLeaderboard();
     }
 
@@ -75,7 +77,7 @@ public class GameManager : MonoBehaviour
 
         string playerName = PlayerProfile.Instance != null ? PlayerProfile.Instance.PlayerName : "Unknown";
         string dropdownChoice = PlayerProfile.Instance != null ? PlayerProfile.Instance.DropdownChoice : "None";
-
+        GameOverPanel.SetActive(true);
         UpdateLeaderboard(playerName, dropdownChoice, score);
         FindFirstObjectByType<OnlineLeaderboard>().UploadScore(playerName, dropdownChoice, score);
 

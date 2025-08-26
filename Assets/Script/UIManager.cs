@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -16,5 +17,13 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         DistanceText.text = $"{gameManager.score} M";
+    }
+    public void GoToMainMenu(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+    public void Onretry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
