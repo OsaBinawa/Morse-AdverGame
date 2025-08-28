@@ -236,6 +236,20 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 64
+  bulletpref: {fileID: 0}
+  firePoint: {fileID: 0}
+  Magazine: 0
+  HP: 0
+  curHP: 0
+  audioSource: {fileID: 0}
+  melee: {fileID: 0}
+  ranged: {fileID: 0}
+  jump: {fileID: 0}
+  hearts: []
+  MagazineUI: {fileID: 0}
+  meeleRange: {fileID: 0}
+  fullHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}
 --- !u!114 &313570358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,6 +912,18 @@ PrefabInstance:
     - target: {fileID: 3037401273567813410, guid: e6025005219873f4591bbf60970e1a48, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774240283280900262, guid: e6025005219873f4591bbf60970e1a48, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.17893347
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774240283280900262, guid: e6025005219873f4591bbf60970e1a48, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.17893347
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774240283280900262, guid: e6025005219873f4591bbf60970e1a48, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17893347
       objectReference: {fileID: 0}
     - target: {fileID: 3774240283280900262, guid: e6025005219873f4591bbf60970e1a48, type: 3}
       propertyPath: m_LocalPosition.x

@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3774240283280900262}
   - component: {fileID: 7456386116279130472}
-  - component: {fileID: 8824354209333194814}
   - component: {fileID: 6337775046245346524}
   - component: {fileID: 1174874168178583843}
   - component: {fileID: 1692619220367856783}
+  - component: {fileID: 8861081255255643535}
+  - component: {fileID: 4069282255658785154}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,8 +32,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.7, y: -2.72, z: 0}
-  m_LocalScale: {x: 0.7575, y: 0.7575, z: 0.7575}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.17893347, y: 0.17893347, z: 0.17893347}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3850330474242653014}
   m_Father: {fileID: 0}
@@ -81,8 +82,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.9529412, g: 0.16195606, b: 0.14901957, a: 1}
+  m_Sprite: {fileID: 1175008897798721629, guid: d741b9cdbaa0e934b969ed11d06b5fbe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -92,43 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &8824354209333194814
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3037401273567813410}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
 --- !u!50 &6337775046245346524
 Rigidbody2D:
   serializedVersion: 5
@@ -268,6 +232,64 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!58 &8861081255255643535
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3037401273567813410}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.22151725, y: -0.38064054}
+  m_Radius: 2.903042
+--- !u!95 &4069282255658785154
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3037401273567813410}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 295a99a98c2fd564ea2aa457b891e5aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2237193495776010585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -326,23 +348,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3054289967343933967, guid: 9ec24861851ed0345bd168b93a214270, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3054289967343933967, guid: 9ec24861851ed0345bd168b93a214270, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3054289967343933967, guid: 9ec24861851ed0345bd168b93a214270, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3054289967343933967, guid: 9ec24861851ed0345bd168b93a214270, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.04
+      value: -0.93
       objectReference: {fileID: 0}
     - target: {fileID: 3054289967343933967, guid: 9ec24861851ed0345bd168b93a214270, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: -0.71
       objectReference: {fileID: 0}
     - target: {fileID: 3054289967343933967, guid: 9ec24861851ed0345bd168b93a214270, type: 3}
       propertyPath: m_LocalPosition.z

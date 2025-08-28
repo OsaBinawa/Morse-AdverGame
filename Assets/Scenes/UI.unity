@@ -225,8 +225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabList:
   - {fileID: 6536623256966708772, guid: 462d7808539399a41b353d0a222a51b5, type: 3}
-  - {fileID: 6536623256966708772, guid: e486a4d5ebf4b0d44a6205b21a25ddef, type: 3}
-  - {fileID: 6536623256966708772, guid: 59871ef52a0a2cb439ce3b86cf496077, type: 3}
+  - {fileID: 6536623256966708772, guid: 462d7808539399a41b353d0a222a51b5, type: 3}
+  - {fileID: 6536623256966708772, guid: 462d7808539399a41b353d0a222a51b5, type: 3}
   poolSize: 10
 --- !u!4 &159812880
 Transform:
@@ -905,9 +905,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3570538304750970371, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570538304750970371, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
+      propertyPath: m_TagString
+      value: Bullet
+      objectReference: {fileID: 0}
     - target: {fileID: 7349501170767099992, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
       propertyPath: Magazine
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7349501170767099992, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
       propertyPath: MagazineUI
@@ -1317,7 +1325,7 @@ Transform:
   m_GameObject: {fileID: 1310006577}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.57, y: -3.06, z: 0.017395936}
+  m_LocalPosition: {x: 10.2, y: -2.58, z: 0.017395936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
