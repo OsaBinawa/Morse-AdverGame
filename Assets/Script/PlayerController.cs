@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using System;
+using System.Collections;
 using TMPro;
 
 public class PlayerController : MonoBehaviour
@@ -22,7 +23,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Image[] hearts;
     [SerializeField] private TMP_Text MagazineUI;
     [SerializeField] private BoxCollider2D meeleRange;
-    public Sprite fullHeart; 
+    private SpriteRenderer sr;
+    public Sprite fullHeart;
     public Sprite emptyHeart;
     //[SerializeField] private bool isHaveBullet;
 
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
         curHP = HP;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
         UpdateHearts();
         UpdateUIBullet();
     }
@@ -78,6 +81,14 @@ public class PlayerController : MonoBehaviour
         curHP--;
         isDie();
         UpdateHearts();
+        StartCoroutine(FlashRed());
+    }
+
+    private IEnumerator FlashRed()
+    {
+        sr.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        sr.color = Color.white;
     }
 
     public bool isDie()
@@ -161,5 +172,7 @@ public class PlayerController : MonoBehaviour
             isDie();
         }
     }
+    
+    
 
 }
