@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private TMP_InputField nameInputField;   // Drag InputField
     [SerializeField] private TMP_Dropdown nameDropdown;       // Drag Dropdown
     [SerializeField] private string gameplaySceneName = "Gameplay";
+    public List<GameObject> panels = new();
 
     private string selectedName = "Player";
     private string selectedDropdown = "None";
@@ -28,6 +30,13 @@ public class MainMenu : MonoBehaviour
         if (nameDropdown != null && nameDropdown.options.Count > 0)
             selectedDropdown = nameDropdown.options[nameDropdown.value].text;
     }
+
+    public void ShowPanel(GameObject panelToShow)
+    {
+        foreach (var panel in panels)
+            panel.SetActive(panel == panelToShow);
+    }
+
 
     private void OnNameInputChanged(string newName)
     {
