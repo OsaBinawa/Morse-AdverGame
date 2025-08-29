@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 26773589d979e9e4289e9b7c04c56a15
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8490308047224664827
+    second: Morse Transparan_2[1]_0
+  - first:
+      213: 2146563826092139589
+    second: Morse Transparan_2[1]_1
+  - first:
+      213: 5679578744559885932
+    second: Morse Transparan_2[1]_2
+  - first:
+      213: -2601947967560200042
+    second: Morse Transparan_2[1]_3
+  - first:
+      213: -8985842444713511768
+    second: Morse Transparan_2[1]_4
+  - first:
+      213: 975182618450600582
+    second: Morse Transparan_2[1]_5
+  - first:
+      213: 8371708764922064204
+    second: Morse Transparan_2[1]_6
+  - first:
+      213: 359352229091818687
+    second: Morse Transparan_2[1]_7
+  - first:
+      213: -5526557476915315562
+    second: Morse Transparan_2[1]_8
+  - first:
+      213: 623822797490611421
+    second: Morse Transparan_2[1]_9
+  - first:
+      213: -6145696281369481265
+    second: Morse Transparan_2[1]_10
+  - first:
+      213: 6101968908579357652
+    second: Morse Transparan_2[1]_11
+  - first:
+      213: -4670509039895676094
+    second: Morse Transparan_2[1]_12
+  - first:
+      213: 1609926656775405553
+    second: Morse Transparan_2[1]_13
+  - first:
+      213: -3192994245072386840
+    second: Morse Transparan_2[1]_14
+  - first:
+      213: -4877969100786559139
+    second: Morse Transparan_2[1]_15
+  - first:
+      213: 8137492745427011304
+    second: Morse Transparan_2[1]_16
+  - first:
+      213: 6482567304256992220
+    second: Morse Transparan_2[1]_17
+  - first:
+      213: 3508103985770490382
+    second: Morse Transparan_2[1]_18
+  - first:
+      213: 4901514620212040642
+    second: Morse Transparan_2[1]_19
+  - first:
+      213: -5260218298722541029
+    second: Morse Transparan_2[1]_20
+  - first:
+      213: 6426916844841389774
+    second: Morse Transparan_2[1]_21
+  - first:
+      213: -2855932989649004596
+    second: Morse Transparan_2[1]_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1053
+        width: 3017
+        height: 1381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d888b80dd5c2a80800000000000000
+      internalID: -8490308047224664827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_1
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 377
+        width: 546
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544ece54d602acd10800000000000000
+      internalID: 2146563826092139589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_2
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 367
+        width: 522
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ed957c6cae1de40800000000000000
+      internalID: 5679578744559885932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_3
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 377
+        width: 433
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6905685fb1604ebd0800000000000000
+      internalID: -2601947967560200042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_4
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 367
+        width: 407
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a43933d7efdb4380800000000000000
+      internalID: -8985842444713511768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_5
+      rect:
+        serializedVersion: 2
+        x: 2644
+        y: 377
+        width: 376
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68222ebbc6b888d00800000000000000
+      internalID: 975182618450600582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_6
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 1
+        width: 158
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4d243834c84e2470800000000000000
+      internalID: 8371708764922064204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_7
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 0
+        width: 145
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc334cc2fcacf400800000000000000
+      internalID: 359352229091818687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_8
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 0
+        width: 169
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69cfea57149bd43b0800000000000000
+      internalID: -5526557476915315562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_9
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 0
+        width: 144
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4e737778348a800800000000000000
+      internalID: 623822797490611421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_10
+      rect:
+        serializedVersion: 2
+        x: 2453
+        y: 0
+        width: 167
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf688b1bc916baa0800000000000000
+      internalID: -6145696281369481265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_11
+      rect:
+        serializedVersion: 2
+        x: 2783
+        y: 1
+        width: 99
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3c95a846c8ea450800000000000000
+      internalID: 6101968908579357652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_12
+      rect:
+        serializedVersion: 2
+        x: 2928
+        y: 158
+        width: 69
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b74cc06c40f2fb0800000000000000
+      internalID: -4670509039895676094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_13
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 0
+        width: 145
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ffb78bb3cb975610800000000000000
+      internalID: 1609926656775405553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_14
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 0
+        width: 122
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4089cb6a430b3d0800000000000000
+      internalID: -3192994245072386840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_15
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1
+        width: 76
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57194a82f8fd4cb0800000000000000
+      internalID: -4877969100786559139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_16
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 0
+        width: 122
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6ce75a98e2ee070800000000000000
+      internalID: 8137492745427011304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_17
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 1
+        width: 229
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd3bccafd94b6f950800000000000000
+      internalID: 6482567304256992220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_18
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 0
+        width: 139
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a6bf20df94fa030800000000000000
+      internalID: 3508103985770490382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_19
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 0
+        width: 122
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c35f17e39da50440800000000000000
+      internalID: 4901514620212040642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_20
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 1
+        width: 132
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1222afb353fff6b0800000000000000
+      internalID: -5260218298722541029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_21
+      rect:
+        serializedVersion: 2
+        x: 2638
+        y: 0
+        width: 122
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ececeb1b1def03950800000000000000
+      internalID: 6426916844841389774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morse Transparan_2[1]_22
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 0
+        width: 139
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7d6a9c310bd58d0800000000000000
+      internalID: -2855932989649004596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Morse Transparan_2[1]_0: -8490308047224664827
+      Morse Transparan_2[1]_1: 2146563826092139589
+      Morse Transparan_2[1]_10: -6145696281369481265
+      Morse Transparan_2[1]_11: 6101968908579357652
+      Morse Transparan_2[1]_12: -4670509039895676094
+      Morse Transparan_2[1]_13: 1609926656775405553
+      Morse Transparan_2[1]_14: -3192994245072386840
+      Morse Transparan_2[1]_15: -4877969100786559139
+      Morse Transparan_2[1]_16: 8137492745427011304
+      Morse Transparan_2[1]_17: 6482567304256992220
+      Morse Transparan_2[1]_18: 3508103985770490382
+      Morse Transparan_2[1]_19: 4901514620212040642
+      Morse Transparan_2[1]_2: 5679578744559885932
+      Morse Transparan_2[1]_20: -5260218298722541029
+      Morse Transparan_2[1]_21: 6426916844841389774
+      Morse Transparan_2[1]_22: -2855932989649004596
+      Morse Transparan_2[1]_3: -2601947967560200042
+      Morse Transparan_2[1]_4: -8985842444713511768
+      Morse Transparan_2[1]_5: 975182618450600582
+      Morse Transparan_2[1]_6: 8371708764922064204
+      Morse Transparan_2[1]_7: 359352229091818687
+      Morse Transparan_2[1]_8: -5526557476915315562
+      Morse Transparan_2[1]_9: 623822797490611421
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
