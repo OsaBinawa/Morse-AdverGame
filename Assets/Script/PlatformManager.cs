@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlatformManager : MonoBehaviour
 {
     public Platform pooler;
-    public float moveSpeed = 5f;
+    [Range(10,20)]public float moveSpeed = 5f;
     public int visiblePlatforms = 5;
     public float spawnY = 0f; // << Manually set this in Inspector
 

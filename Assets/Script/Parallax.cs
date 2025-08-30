@@ -3,6 +3,7 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
     [SerializeField] private float scrollSpeed = 0.2f;
+    private int addCount = 0;
     private Material mat;
     float speed;
 
@@ -25,10 +26,16 @@ public class Parallax : MonoBehaviour
     {
         speed += Time.deltaTime * scrollSpeed;
         mat.SetTextureOffset("_MainTex", Vector2.right * speed);
+
+        if (addCount == 20)
+        {
+            GameManager.OnMilestone -= AddSpeed;
+        }
     }
 
     void AddSpeed()
     {
         scrollSpeed *= 1.1f;
+        addCount += 1;
     }
 }
