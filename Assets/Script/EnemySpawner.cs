@@ -5,7 +5,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] enemies;
     [SerializeField] private Transform[] enemySpawner;
-    [Range(2.5f, 5)] public float interval = 5;
+    [Range(1f, 2.5f)] public float interval = 2.5f;
     float timer;
 
     void OnEnable()
@@ -35,6 +35,6 @@ public class EnemySpawner : MonoBehaviour
 
     void decreaseInterval()
     {
-        interval -= 0.125f;
+        interval -= 0.2f;
     }
 }

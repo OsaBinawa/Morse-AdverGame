@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask ground;
     [SerializeField] private GameObject bulletpref;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private int Magazine;
+    [Range(0,20)][SerializeField] private int Magazine;
     [SerializeField] private int HP;
     [SerializeField] private int curHP;
     [SerializeField] private AudioSource audioSource;
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     public void Onjump(InputAction.CallbackContext context)
@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage()
     {
         curHP--;
+        curHP = Mathf.Clamp(curHP, 0, HP);
         isDie();
         UpdateHearts();
         StartCoroutine(FlashRed());
@@ -124,6 +125,7 @@ public class PlayerController : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletpref, firePoint.position, firePoint.rotation);
         Magazine--;
+        // Magazine = Mathf.Clamp(Magazine, 0, 20);
         UpdateUIBullet();
     }
 
@@ -144,6 +146,7 @@ public class PlayerController : MonoBehaviour
     }
     void UpdateUIBullet()
     {
+        Magazine = Mathf.Clamp(Magazine, 0, 20);
         MagazineUI.text = Magazine.ToString();
     }
 
@@ -171,8 +174,17 @@ public class PlayerController : MonoBehaviour
             curHP -= HP;
             isDie();
         }
+        if (collision.CompareTag("Heal"))
+        {
+            curHP++;
+            curHP = Mathf.Clamp(curHP, 0, HP);
+            UpdateHearts();
+        }
+        if (collision.CompareTag("Ammo"))
+        {
+            Magazine += 20;
+            // Magazine = Mathf.Clamp(Magazine, 0, 20);
+            UpdateUIBullet();
+        }
     }
-    
-    
-
 }

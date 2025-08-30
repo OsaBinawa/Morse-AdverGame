@@ -925,7 +925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7349501170767099992, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
       propertyPath: Magazine
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7349501170767099992, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
       propertyPath: MagazineUI
@@ -933,7 +933,7 @@ PrefabInstance:
       objectReference: {fileID: 1762390779}
     - target: {fileID: 7349501170767099992, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
       propertyPath: JumpImpulse
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7349501170767099992, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
       propertyPath: 'hearts.Array.data[0]'
@@ -1422,7 +1422,7 @@ Transform:
   m_GameObject: {fileID: 1184874655}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.81, y: 0, z: 0.017395936}
+  m_LocalPosition: {x: 9.81, y: 2.16, z: 0.017395936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1475,7 +1475,7 @@ MonoBehaviour:
   enemySpawner:
   - {fileID: 1310006579}
   - {fileID: 1184874657}
-  interval: 5
+  interval: 1
 --- !u!4 &1310006579
 Transform:
   m_ObjectHideFlags: 0
@@ -1879,6 +1879,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 462d7808539399a41b353d0a222a51b5, type: 3}
+--- !u!1 &1965235576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1965235577}
+  - component: {fileID: 1965235578}
+  m_Layer: 0
+  m_Name: CollectibleSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1965235577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965235576}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: -0.05, z: 626.55334}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965235578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965235576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56204718f2bf7c44a78b6481ceac6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawner: {fileID: 1965235577}
+  Collectibles:
+  - {fileID: 7451393117202675644, guid: 47ae654e067b1fc4ba7a2b7255bce7d5, type: 3}
+  - {fileID: 7451393117202675644, guid: f590c1451101e354b9e249ccf0798d54, type: 3}
+  interval: 30
 --- !u!1001 &1693694705703527641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2067,6 +2116,7 @@ SceneRoots:
   - {fileID: 1310006579}
   - {fileID: 1184874657}
   - {fileID: 159812880}
+  - {fileID: 1965235577}
   - {fileID: 998694240}
   - {fileID: 129863634}
   - {fileID: 1906735636}

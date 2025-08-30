@@ -45,11 +45,13 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         PlayerController.OnPlayerDied += GameOver;
+        Enemy.OnEnemyDied += AdditionalScore;
     }
 
     private void OnDisable()
     {
         PlayerController.OnPlayerDied -= GameOver;
+        Enemy.OnEnemyDied += AdditionalScore;
     }
 
     public void AddScore(int amount)
@@ -62,6 +64,11 @@ public class GameManager : MonoBehaviour
             OnScoreMilestone(score);
             OnMilestone?.Invoke();
         }
+    }
+
+    public void AdditionalScore()
+    {
+        score += 10;
     }
 
     private void OnScoreMilestone(int milestone)

@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - Obstacle
   - Enemy
+  - Heal
+  - Ammo
   layers:
   - Default
   - TransparentFX
