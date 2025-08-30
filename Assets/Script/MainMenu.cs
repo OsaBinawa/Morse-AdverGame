@@ -14,6 +14,12 @@ public class MainMenu : MonoBehaviour
     private string selectedName = "Player";
     private string selectedDropdown = "None";
     private string selectedExtra = "None";
+
+    private void Awake()
+    {
+        Time.timeScale = 1.0f;
+    }
+
     private void Start()
     {
         // Default InputField text
