@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
     private void OnScoreMilestone(int milestone)
     {
         Debug.Log($"Reached {milestone} points!");
-        platformManager.moveSpeed *= speedToAdd;
+        platformManager.moveSpeed += speedToAdd;
     }
 
     public void GameOver()
