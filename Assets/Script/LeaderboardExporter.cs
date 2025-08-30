@@ -9,12 +9,14 @@ public class LeaderboardEntry
     public string playerName;
     public string dropdownChoice;
     public int score;
+    public string extraField;
 
-    public LeaderboardEntry(string name, string dropdownChoice, int score)
+    public LeaderboardEntry(string name, string dropdownChoice, int score, string extraField)
     {
         this.playerName = name;
         this.dropdownChoice = dropdownChoice;
         this.score = score;
+        this.extraField = extraField;
     }
 }
 
@@ -58,11 +60,12 @@ public class LeaderboardExporter : MonoBehaviour
     public void Export(List<LeaderboardEntry> leaderboard)
     {
         StringBuilder csv = new StringBuilder();
-        csv.AppendLine("Rank,Name,Social,Score");
+        csv.AppendLine("Rank,Name,Username,Social,Score");
 
         for (int i = 0; i < leaderboard.Count; i++)
         {
-            csv.AppendLine($"{i + 1},{leaderboard[i].playerName},{leaderboard[i].dropdownChoice},{leaderboard[i].score}");
+            csv.AppendLine($"{i + 1},{leaderboard[i].playerName},{leaderboard[i].extraField},{leaderboard[i].dropdownChoice},{leaderboard[i].score}");
+
         }
 
         File.WriteAllText(filePath, csv.ToString());

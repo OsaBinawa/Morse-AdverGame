@@ -7,18 +7,20 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private TMP_InputField nameInputField;   // Drag InputField
     [SerializeField] private TMP_Dropdown nameDropdown;       // Drag Dropdown
+    [SerializeField] private TMP_InputField extraInputField;
     [SerializeField] private string gameplaySceneName = "Gameplay";
     public List<GameObject> panels = new();
 
     private string selectedName = "Player";
     private string selectedDropdown = "None";
-
+    private string selectedExtra = "None";
     private void Start()
     {
         // Default InputField text
         if (nameInputField != null && !string.IsNullOrEmpty(nameInputField.text))
             selectedName = nameInputField.text;
-
+        if (extraInputField != null)
+            extraInputField.onEndEdit.AddListener(OnExtraInputChanged);
         // Listeners
         if (nameInputField != null)
             nameInputField.onEndEdit.AddListener(OnNameInputChanged);
@@ -30,6 +32,14 @@ public class MainMenu : MonoBehaviour
         if (nameDropdown != null && nameDropdown.options.Count > 0)
             selectedDropdown = nameDropdown.options[nameDropdown.value].text;
     }
+    private void OnExtraInputChanged(string newExtra)
+    {
+        if (!string.IsNullOrEmpty(newExtra))
+            selectedExtra = newExtra;
+
+        Debug.Log("➕ Extra input: " + selectedExtra);
+    }
+
 
     public void ShowPanel(GameObject panelToShow)
     {
@@ -57,12 +67,12 @@ public class MainMenu : MonoBehaviour
     public void OnStartGame()
     {
         string playerName = (!string.IsNullOrEmpty(nameInputField.text)) ? nameInputField.text : selectedName;
+        string extraField = (!string.IsNullOrEmpty(extraInputField.text)) ? extraInputField.text : selectedExtra;
 
-        // Save into PlayerProfile (so GameManager can grab it later)
-        PlayerProfile.Instance.SetPlayerName(playerName, selectedDropdown);
+        // Save into PlayerProfile
+        PlayerProfile.Instance.SetPlayerProfile(playerName, selectedDropdown, extraField);
 
-        Debug.Log($"🎮 Starting game with Name: {playerName}, Dropdown: {selectedDropdown}");
+        Debug.Log($"🎮 Starting game with Name: {playerName}, Dropdown: {selectedDropdown}, Extra: {extraField}");
 
-        SceneManager.LoadScene(gameplaySceneName);
     }
 }
