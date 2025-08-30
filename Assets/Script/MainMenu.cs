@@ -47,7 +47,10 @@ public class MainMenu : MonoBehaviour
             panel.SetActive(panel == panelToShow);
     }
 
-
+    public void OnApplicationQuit()
+    {
+        Application.Quit();
+    }
     private void OnNameInputChanged(string newName)
     {
         if (!string.IsNullOrEmpty(newName))
