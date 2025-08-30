@@ -3,20 +3,22 @@ using UnityEngine.Networking;
 using System.Collections;
 public class OnlineLeaderboard : MonoBehaviour
 {
-    private string scriptURL = "https://script.google.com/macros/s/AKfycbzfRUFaUnFXbWlHqhOoa5rspPlrSBtSURgsnGrtHnONLEuEFjWKo8GvgtwPv64wSeapng/exec"; // paste from Google Apps Script deploy
+    private string scriptURL = "https://script.google.com/macros/s/AKfycbxpWl-sBhhuWq3t-e53cgwAPH1XPSqJDpuIGVwKzM0EQz--C11kdzYrDESLJ-aH5VxEQQ/exec"; // paste from Google Apps Script deploy
 
     // Upload score (call from GameOver)
-    public void UploadScore(string playerName, string dropdown, int score)
+    public void UploadScore(string playerName, string dropdown, int score, string username)
     {
-        StartCoroutine(PostScore(playerName, dropdown, score));
+        StartCoroutine(PostScore(playerName, dropdown, score, username));
     }
 
-    private IEnumerator PostScore(string playerName, string dropdown, int score)
+
+    private IEnumerator PostScore(string playerName, string dropdown, int score, string username)
     {
         WWWForm form = new WWWForm();
         form.AddField("name", playerName);
         form.AddField("dropdown", dropdown);
         form.AddField("score", score);
+        form.AddField("username", username);   // ✅ send as username
 
         using (UnityWebRequest www = UnityWebRequest.Post(scriptURL, form))
         {
@@ -26,7 +28,10 @@ public class OnlineLeaderboard : MonoBehaviour
             else
                 Debug.Log("✅ Upload response: " + www.downloadHandler.text);
         }
+        Debug.Log($"⬆️ Sending to sheet: name={playerName}, dropdown={dropdown}, score={score}, username={username}");
+
     }
+
 
     // Inspector button will call this
     public void WipeLeaderboard()

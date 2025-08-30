@@ -77,17 +77,20 @@ public class GameManager : MonoBehaviour
 
         string playerName = PlayerProfile.Instance != null ? PlayerProfile.Instance.PlayerName : "Unknown";
         string dropdownChoice = PlayerProfile.Instance != null ? PlayerProfile.Instance.DropdownChoice : "None";
-        GameOverPanel.SetActive(true);
-        UpdateLeaderboard(playerName, dropdownChoice, score);
-        FindFirstObjectByType<OnlineLeaderboard>().UploadScore(playerName, dropdownChoice, score);
+        string username = PlayerProfile.Instance != null ? PlayerProfile.Instance.Username : "Unknown";
 
+        GameOverPanel.SetActive(true);
+        UpdateLeaderboard(playerName, dropdownChoice, score, username);
+        FindFirstObjectByType<OnlineLeaderboard>().UploadScore(playerName, dropdownChoice, score, username);
         LeaderboardExporter.Instance.Export(leaderboard);
     }
 
+
+
     // ---------------- Leaderboard Methods ----------------
-    private void UpdateLeaderboard(string playerName, string dropdownChoice, int newScore)
+    private void UpdateLeaderboard(string playerName, string dropdownChoice, int newScore, string extraField)
     {
-        leaderboard.Add(new LeaderboardEntry(playerName, dropdownChoice, newScore));
+        leaderboard.Add(new LeaderboardEntry(playerName, dropdownChoice, newScore, extraField));
         leaderboard = leaderboard
             .OrderByDescending(entry => entry.score)
             .Take(MaxLeaderboardEntries)
@@ -98,20 +101,23 @@ public class GameManager : MonoBehaviour
         Debug.Log("Leaderboard:");
         for (int i = 0; i < leaderboard.Count; i++)
         {
-            Debug.Log($"{i + 1}. {leaderboard[i].playerName} - {leaderboard[i].dropdownChoice} - {leaderboard[i].score}");
+            Debug.Log($"{i + 1}. {leaderboard[i].playerName} - {leaderboard[i].dropdownChoice} - {leaderboard[i].username} - {leaderboard[i].score}");
         }
     }
+
 
     private void SaveLeaderboard()
     {
         for (int i = 0; i < leaderboard.Count; i++)
         {
             PlayerPrefs.SetString("HighScoreName" + i, leaderboard[i].playerName);
-            PlayerPrefs.SetString("HighScoreDropdown" + i, leaderboard[i].dropdownChoice); // NEW: save dropdown
+            PlayerPrefs.SetString("HighScoreDropdown" + i, leaderboard[i].dropdownChoice);
             PlayerPrefs.SetInt("HighScoreValue" + i, leaderboard[i].score);
+            PlayerPrefs.SetString("HighScoreUsername" + i, leaderboard[i].username); // ✅ save username
         }
         PlayerPrefs.Save();
     }
+
 
     private void LoadLeaderboard()
     {
@@ -123,8 +129,9 @@ public class GameManager : MonoBehaviour
                 string name = PlayerPrefs.GetString("HighScoreName" + i, "Player");
                 string dropdown = PlayerPrefs.GetString("HighScoreDropdown" + i, "None"); // NEW: load dropdown (defaults if missing)
                 int savedScore = PlayerPrefs.GetInt("HighScoreValue" + i, 0);
+                string username = PlayerPrefs.GetString("HighScoreUsername" + i, "Unknown");
 
-                leaderboard.Add(new LeaderboardEntry(name, dropdown, savedScore)); // ✅ pass all 3 args
+                leaderboard.Add(new LeaderboardEntry(name, dropdown, savedScore,username)); // ✅ pass all 3 args
             }
         }
     }

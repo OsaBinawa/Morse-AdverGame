@@ -71,7 +71,7 @@ public class MainMenu : MonoBehaviour
 
         // Save into PlayerProfile
         PlayerProfile.Instance.SetPlayerProfile(playerName, selectedDropdown, extraField);
-
+        SceneManager.LoadScene(gameplaySceneName);
         Debug.Log($"🎮 Starting game with Name: {playerName}, Dropdown: {selectedDropdown}, Extra: {extraField}");
 
     }

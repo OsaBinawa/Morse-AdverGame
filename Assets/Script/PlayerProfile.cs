@@ -5,7 +5,7 @@ public class PlayerProfile : MonoBehaviour
     public static PlayerProfile Instance { get; private set; }
     public string PlayerName { get; private set; } = "Player";
     public string DropdownChoice { get; private set; } = "None";
-    public string ExtraField { get; private set; } = "None";
+    public string Username { get; private set; } = "Unknown";
 
     private void Awake()
     {
@@ -24,11 +24,11 @@ public class PlayerProfile : MonoBehaviour
         DropdownChoice = dropdown;
         Debug.Log($"👤 Player set: {PlayerName}, Dropdown: {DropdownChoice}");
     }
-    public void SetPlayerProfile(string name, string dropdown = "None", string extra = "None")
+    public void SetPlayerProfile(string name, string dropdown = "None", string username = "Unknown")
     {
         PlayerName = !string.IsNullOrEmpty(name) ? name : "Player";
         DropdownChoice = dropdown;
-        ExtraField = !string.IsNullOrEmpty(extra) ? extra : "None";
-        Debug.Log($"👤 Player set: {PlayerName}, Dropdown: {DropdownChoice}, Extra: {ExtraField}");
+        Username = !string.IsNullOrEmpty(username) ? username : "Unknown";
+        Debug.Log($"👤 Player set: {PlayerName}, Dropdown: {DropdownChoice}, Username: {Username}");
     }
 }

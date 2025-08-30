@@ -9,16 +9,17 @@ public class LeaderboardEntry
     public string playerName;
     public string dropdownChoice;
     public int score;
-    public string extraField;
+    public string username;
 
-    public LeaderboardEntry(string name, string dropdownChoice, int score, string extraField)
+    public LeaderboardEntry(string name, string dropdownChoice, int score, string username)
     {
         this.playerName = name;
         this.dropdownChoice = dropdownChoice;
         this.score = score;
-        this.extraField = extraField;
+        this.username = username;
     }
 }
+
 
 public class LeaderboardExporter : MonoBehaviour
 {
@@ -64,7 +65,7 @@ public class LeaderboardExporter : MonoBehaviour
 
         for (int i = 0; i < leaderboard.Count; i++)
         {
-            csv.AppendLine($"{i + 1},{leaderboard[i].playerName},{leaderboard[i].extraField},{leaderboard[i].dropdownChoice},{leaderboard[i].score}");
+            csv.AppendLine($"{i + 1},{leaderboard[i].playerName},{leaderboard[i].username},{leaderboard[i].dropdownChoice},{leaderboard[i].score}");
 
         }
 
