@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int health = 3;
     [SerializeField] private float speed = 1;
     [SerializeField] private ParticleSystem dieEffect;
-    public static event Action OnEnemyDied;
+    public static event Action OnEnemyDied, OnEnemyKilled;
     HealthSystem healthSystem;
     private Rigidbody2D rb;
 
@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("Bullet"))
         {
             Die();
+            OnEnemyKilled?.Invoke();
         }
         if (collision.CompareTag("Border"))
         {

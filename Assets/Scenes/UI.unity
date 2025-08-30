@@ -230,8 +230,8 @@ MonoBehaviour:
   - {fileID: 6536623256966708772, guid: d084fb372a5b57b49bfda1bb74af0fe0, type: 3}
   - {fileID: 6536623256966708772, guid: d83c52e9f5070034b9319b882f2c15a7, type: 3}
   - {fileID: 6536623256966708772, guid: 4828b9c70a056294cbc8b5d3082774c3, type: 3}
-  - {fileID: 6536623256966708772, guid: 619e8cdf9ea23884691c3239fb1fca20, type: 3}
   - {fileID: 6536623256966708772, guid: 01896d173ce6dca48bb787c482b866e9, type: 3}
+  - {fileID: 6536623256966708772, guid: 7eb562ab8849f274187240fc74a66503, type: 3}
   poolSize: 10
 --- !u!4 &159812880
 Transform:
@@ -1206,6 +1206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1535643011}
   die: {fileID: 8300000, guid: 5fac3e3f1ff430d4c85ba5971e87a28c, type: 3}
+  damaged: {fileID: 8300000, guid: 5fac3e3f1ff430d4c85ba5971e87a28c, type: 3}
 --- !u!114 &998694238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1475,7 +1476,7 @@ MonoBehaviour:
   enemySpawner:
   - {fileID: 1310006579}
   - {fileID: 1184874657}
-  interval: 1
+  interval: 2.5
 --- !u!4 &1310006579
 Transform:
   m_ObjectHideFlags: 0
@@ -1927,7 +1928,7 @@ MonoBehaviour:
   Collectibles:
   - {fileID: 7451393117202675644, guid: 47ae654e067b1fc4ba7a2b7255bce7d5, type: 3}
   - {fileID: 7451393117202675644, guid: f590c1451101e354b9e249ccf0798d54, type: 3}
-  interval: 30
+  interval: 10
 --- !u!1001 &1693694705703527641
 PrefabInstance:
   m_ObjectHideFlags: 0

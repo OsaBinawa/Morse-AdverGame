@@ -45,13 +45,13 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         PlayerController.OnPlayerDied += GameOver;
-        Enemy.OnEnemyDied += AdditionalScore;
+        Enemy.OnEnemyKilled += AdditionalScore;
     }
 
     private void OnDisable()
     {
         PlayerController.OnPlayerDied -= GameOver;
-        Enemy.OnEnemyDied += AdditionalScore;
+        Enemy.OnEnemyKilled += AdditionalScore;
     }
 
     public void AddScore(int amount)

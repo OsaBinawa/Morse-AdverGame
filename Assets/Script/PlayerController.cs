@@ -7,7 +7,7 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    public static event Action OnPlayerDied;
+    public static event Action OnPlayerDied, OnPlayerDamaged;
 
     Rigidbody2D rb;
     Animator anim;
@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
         isDie();
         UpdateHearts();
         StartCoroutine(FlashRed());
+        OnPlayerDamaged?.Invoke();
     }
 
     private IEnumerator FlashRed()
