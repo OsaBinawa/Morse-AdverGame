@@ -65,7 +65,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d9099ebea4e517244a9660b9b552bbb2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -173,13 +173,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48c97906a67af94da9da80fb81a2684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpImpulse: 15
+  JumpImpulse: 20
   ground:
     serializedVersion: 2
     m_Bits: 64
   bulletpref: {fileID: 2082100387698397371, guid: f70b67328cb8f9744a6c32af9af1db9f, type: 3}
   firePoint: {fileID: 6556727761483089886}
-  Magazine: 15
+  Magazine: 20
   HP: 3
   curHP: 0
   audioSource: {fileID: 4110903873832713610}
@@ -453,13 +453,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2172049486169270041}
   - component: {fileID: 3470441075061467325}
+  - component: {fileID: 1527740042937273448}
   m_Layer: 0
   m_Name: MeeleRange
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2172049486169270041
 Transform:
   m_ObjectHideFlags: 0
@@ -482,7 +483,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3570538304750970371}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -521,6 +522,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5573802, y: 2.1513095}
   m_EdgeRadius: 0
+--- !u!114 &1527740042937273448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3570538304750970371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 135c78b3559fbc34a84303cac0b10a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5392065538219881478
 GameObject:
   m_ObjectHideFlags: 0

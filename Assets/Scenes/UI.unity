@@ -603,23 +603,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &385735653 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3570538304750970371, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
-  m_PrefabInstance: {fileID: 563731257}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &385735656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385735653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 135c78b3559fbc34a84303cac0b10a62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &417496509
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,30 +894,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3470441075061467325, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3570538304750970371, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3570538304750970371, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
-      propertyPath: m_TagString
-      value: Bullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 7349501170767099992, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
-      propertyPath: Magazine
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 7349501170767099992, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
       propertyPath: MagazineUI
       value: 
       objectReference: {fileID: 1762390779}
-    - target: {fileID: 7349501170767099992, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
-      propertyPath: JumpImpulse
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 7349501170767099992, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
       propertyPath: 'hearts.Array.data[0]'
       value: 
@@ -950,10 +913,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3570538304750970371, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 385735656}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d69c5f33f39f614c8301bf8d662afa2, type: 3}
 --- !u!1 &763822576 stripped
 GameObject:
