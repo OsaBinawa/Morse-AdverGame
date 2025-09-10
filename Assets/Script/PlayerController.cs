@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Image[] hearts;
     [SerializeField] private TMP_Text MagazineUI;
     [SerializeField] private BoxCollider2D meeleRange;
+    [SerializeField] private bool isGrounded;
     private SpriteRenderer sr;
     public Sprite fullHeart;
     public Sprite emptyHeart;
@@ -41,7 +42,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
+        isGrounded = Grounded();
+        anim.SetBool("Run", isGrounded);
+        anim.SetBool("Fall",!isGrounded);
     }
 
     public void Onjump(InputAction.CallbackContext context)
