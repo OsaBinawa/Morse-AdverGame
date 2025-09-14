@@ -27,6 +27,7 @@ public class LeaderBoardFetch : MonoBehaviour
     {
         Debug.Log("LeaderboardManager Awake: fetching leaderboard...");
         FetchLeaderboard();
+        StartCoroutine(AutoFetchLeaderboard());
     }
     // ---------------- Upload ----------------
     public void UploadScore(string playerName, string dropdown, int score)
@@ -127,6 +128,15 @@ public class LeaderBoardFetch : MonoBehaviour
             nameTexts[i].text = "-";
             scoreTexts[i].text = "-";
             Debug.Log($"ℹ️ Cleared Slot {i}");
+        }
+    }
+
+    private IEnumerator AutoFetchLeaderboard()
+    {
+        while (true)
+        {
+            FetchLeaderboard();             // Fetch once
+            yield return new WaitForSeconds(30f); // Wait 10 seconds, then repeat
         }
     }
 
