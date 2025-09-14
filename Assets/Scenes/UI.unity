@@ -1180,10 +1180,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  milestone: 500
+  milestone: 200
   speedToAdd: 1
   pointsPerSecond: 10
   GameOverPanel: {fileID: 474853050}
+  nextMilestone: 0
 --- !u!114 &998694239
 MonoBehaviour:
   m_ObjectHideFlags: 0
