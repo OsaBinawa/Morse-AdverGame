@@ -8,15 +8,15 @@ public class EnemySpawner : MonoBehaviour
     [Range(1f, 2.5f)] public float interval = 2.5f;
     float timer;
 
-    void OnEnable()
-    {
-        GameManager.OnMilestone += decreaseInterval;
-    }
+    // void OnEnable()
+    // {
+    //     GameManager.OnMilestone += decreaseInterval;
+    // }
 
-    void OnDisable()
-    {
-        GameManager.OnMilestone -= decreaseInterval;
-    }
+    // void OnDisable()
+    // {
+    //     GameManager.OnMilestone -= decreaseInterval;
+    // }
 
     void Update()
     {
@@ -33,8 +33,8 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    void decreaseInterval()
-    {
-        interval -= 0.2f;
-    }
+    // void decreaseInterval()
+    // {
+    //     interval -= 0.2f;
+    // }
 }

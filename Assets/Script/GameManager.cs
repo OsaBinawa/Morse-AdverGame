@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
         score += amount;
 
-        if (score % 100 == 0)
+        if (score % milestone == 0)
         {
             milestone = score;
             OnScoreMilestone(score);

@@ -765,11 +765,11 @@ Transform:
   m_GameObject: {fileID: 469132543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.22324, y: 3.1, z: 8.985312}
+  m_LocalPosition: {x: 5.08, y: 9.21, z: 3.33}
   m_LocalScale: {x: 24.726433, y: 6.954309, z: 0.1545402}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1054817316}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &469132545
 MonoBehaviour:
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  milestone: 200
+  milestone: 500
   speedToAdd: 1
   pointsPerSecond: 10
   GameOverPanel: {fileID: 474853050}
@@ -1353,7 +1353,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2115766477}
+  - {fileID: 469132544}
   - {fileID: 1544516986}
   - {fileID: 1871456888}
   - {fileID: 1463457186}
@@ -1373,14 +1373,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1982831001}
   layers:
-  - layer: {fileID: 2115766477}
-    parallaxFactor: 0.025
+  - layer: {fileID: 469132544}
+    parallaxFactor: 0
   - layer: {fileID: 1544516986}
     parallaxFactor: 0.05
   - layer: {fileID: 1871456888}
-    parallaxFactor: 0.07
+    parallaxFactor: 0.05
   - layer: {fileID: 1463457186}
-    parallaxFactor: 0.1
+    parallaxFactor: 0.05
 --- !u!1 &1184874655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,7 +1506,8 @@ Transform:
   m_LocalPosition: {x: 5.3867598, y: 5.73, z: -4.5553126}
   m_LocalScale: {x: 24.726433, y: 6.954309, z: 0.1545402}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2115766477}
   m_Father: {fileID: 1054817316}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1463457187
@@ -1930,7 +1931,7 @@ GameObject:
   - component: {fileID: 2115766479}
   - component: {fileID: 2115766478}
   m_Layer: 0
-  m_Name: 1 (1)
+  m_Name: Tanah
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1945,11 +1946,11 @@ Transform:
   m_GameObject: {fileID: 2115766476}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.08, y: 1.61, z: 3.33}
-  m_LocalScale: {x: 24.726433, y: 6.954309, z: 0.1545402}
+  m_LocalPosition: {x: -0.012406151, y: -0.7223291, z: 1.1344137}
+  m_LocalScale: {x: 1, y: 0.7401999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1054817316}
+  m_Father: {fileID: 1463457186}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2115766478
 MonoBehaviour:
@@ -2197,7 +2198,6 @@ SceneRoots:
   - {fileID: 1693694705703527641}
   - {fileID: 317337962}
   - {fileID: 417496512}
-  - {fileID: 469132544}
   - {fileID: 1054817316}
   - {fileID: 870320671}
   - {fileID: 198601485}
