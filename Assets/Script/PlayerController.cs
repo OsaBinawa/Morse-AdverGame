@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
 
         if (Physics2D.Raycast(transform.position, Vector2.down, 2f, ground))
         {
-            Debug.Log("Hit");
+            //Debug.Log("Hit");
             return true;
         }
         else

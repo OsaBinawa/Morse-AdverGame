@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float pointsPerSecond = 10f;
     [SerializeField] private GameObject GameOverPanel;  
     private float scoreTimer;
-
+    [SerializeField]private int nextMilestone;
     // Leaderboard
     private const int MaxLeaderboardEntries = 5;
     private List<LeaderboardEntry> leaderboard = new List<LeaderboardEntry>();
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         platformManager = FindFirstObjectByType<PlatformManager>();
         Time.timeScale = 1f;
         LoadLeaderboard();
+        nextMilestone = milestone;
     }
 
     private void Update()
@@ -58,11 +59,12 @@ public class GameManager : MonoBehaviour
     {
         score += amount;
 
-        if (score % milestone == 0)
+        if (score >= nextMilestone)
         {
-            milestone = score;
-            OnScoreMilestone(score);
+            OnScoreMilestone(nextMilestone);
             OnMilestone?.Invoke();
+
+            nextMilestone += milestone; 
         }
     }
 
